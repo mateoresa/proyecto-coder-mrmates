@@ -4,21 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
     <title>Productos | MR Mates</title>
 </head>
 
 <body>
     <header>
         <div>
-            <p>Productos</p>
+            <p class="nav-logo">Productos</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./nosotros.html">Nosotros</a></li>
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./tips.html">Tips</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                <li><a href="./nosotros.html" class="nav-link">Nosotros</a></li>
+                <li><a href="./productos.html" class="nav-link">Productos</a></li>
+                <li><a href="./tips.html" class="nav-link">Tips</a></li>
+                <li><a href="./contacto.html" class="nav-link">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -34,17 +38,24 @@
         </article>
         <article>
             <h2>Mate Torpedo</h2>
-            <p>Mate tipo torpedo elaborado en calabaza seleccionada, forrado en cuero vacuno con costuras reforzadas y virola de acero inoxidable.</p>
+            <p>Mate tipo torpedo elaborado en calabaza seleccionada, forrado en cuero vacuno con costuras reforzadas y
+                virola de acero inoxidable.</p>
             <figure>
                 <img src="../assets/matetorpedo.png" alt="Fotografia de un mate torpedo">
                 <figcaption>Mate Torpedo</figcaption>
             </figure>
         </article>
     </main>
-    <footer>
-        <p>&copy; 2026 Mr. Mates. Todos los derechos reservados.</p>
-        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-        <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p class="footer-brand">MR. Mates</p>
+            <ul class="footer-links">
+                <li><a href="https://instagram.com" target="_blank" class="footer-link">Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank" class="footer-link">Facebook</a></li>
+                <li><a href="mailto:tuemail@ejemplo.com" class="footer-link">Contacto</a></li>
+            </ul>
+            <p class="footer-copy">&copy; 2026 Todos los derechos reservados.</p>
+        </div>
     </footer>
 </body>
 
