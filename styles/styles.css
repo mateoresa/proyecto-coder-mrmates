@@ -14,26 +14,36 @@ body {
 }
 
 /* ----------------------------------------Seccion Header---------------------------------------- */
-header {
+.main-header {
     background-color: #1F3324;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav-logo {
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
     color: #F4EFE3;
+    text-decoration: none;
 }
 
-.nav-list li {
-    display: inline-block;
+.nav-list {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
 }
 
 .nav-link {
-    text-decoration: none;
     color: #F4EFE3;
+    text-decoration: none;
+    font-size: 0.95rem;
     font-weight: 600;
-    padding: 8px 12px;
     transition: color 0.3s ease;
 }
 
@@ -44,67 +54,131 @@ header {
 
 
 /* ----------------------------------------Seccion Main---------------------------------------- */
-main {
-    background-color: #F4EFE3;
+/* ====================
+SECCIÓN HERO / BIENVENIDA
+==================== */
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
 }
 
-h1 {
+.hero-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-title {
+    font-size: 2.2rem;
     color: #8A5A3B;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
 }
 
-h2 {
+.hero-description {
+    font-size: 1.1rem;
+    color: #171A17;
+}
+
+/* ====================
+SECCIÓN PRODUCTOS (CSS GRID)
+==================== */
+.products-section {
+    margin-top: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.6rem;
     color: #8A5A3B;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
+    margin-bottom: 30px;
 }
 
-h3 {
-    color: #8A5A3B;
-    font-size: 1.2rem;
-    font-weight: 600;
+/* Contenedor Grid */
+.products-grid {
+    display: grid;
+    /* Crea 2 columnas de igual tamaño */
+    grid-template-columns: repeat(2, 1fr);
+    /* Espacio entre las tarjetas */
+    gap: 30px;
 }
 
-p {
-    font-weight: 400;
-    margin-bottom: 1rem;
+/* Tarjeta individual */
+.product-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
 }
 
+.product-title {
+    font-size: 1.3rem;
+    color: #1F3324;
+    margin-bottom: 15px;
+}
 
+.product-figure {
+    margin: 0;
+    padding: 0;
+}
+
+.product-img {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    object-fit: contain; /* Mantiene la proporción del mate sin recortarlo */
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.product-caption {
+    font-size: 0.9rem;
+    color: #666666;
+    font-style: italic;
+}
 
 /* ----------------------------------------Seccion Footer---------------------------------------- */
+/* ====================
+FOOTER (FLEXBOX)
+==================== */
+
 .main-footer {
-    background-color: #1F3324;  
-    color: #F4EFE3;             
-    padding: 30px 20px;         
-    text-align: center;         
-    margin-top: 40px;
+    background-color: #1F3324;
+    color: #F4EFE3;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 .footer-brand {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #F4EFE3;
+    margin: 0;
 }
 
 .footer-links {
     list-style: none;
+    margin: 0;
     padding: 0;
-    margin: 0 0 16px 0;
-}
-
-.footer-links li {
-    display: inline-block;      /* Pone los enlaces uno al lado del otro */
-    margin: 0 10px;             /* Espacio horizontal entre enlaces */
+    
+    display: flex;
+    gap: 25px;
+    align-items: center;
 }
 
 .footer-link {
     color: #F4EFE3;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     transition: color 0.3s ease;
 }
 
@@ -113,7 +187,63 @@ p {
 }
 
 .footer-copy {
-    font-size: 0.8rem;
-    color: #888888;
+    color: #b0b0b0;
+    font-size: 0.85rem;
     margin: 0;
+}
+
+/*------------------------------SECCION MAIN NOSOTROS------------------------------*/
+
+/* ====================
+SECCIÓN HISTORIA / NOSOTROS (CSS GRID)
+==================== */
+
+.main-about-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.about-title {
+    font-size: 2rem;
+    color: #8A5A3B;
+    margin-bottom: 15px;
+}
+
+.about-description {
+    font-size: 1.05rem;
+    color: #171A17;
+    line-height: 1.6;
+}
+
+.about-figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.about-img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+.about-caption {
+    font-size: 0.85rem;
+    color: #666666;
+    margin-top: 8px;
+    font-style: italic;
 }

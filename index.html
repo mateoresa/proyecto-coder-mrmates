@@ -12,10 +12,8 @@
 </head>
 
 <body>
-    <header>
-        <div>
-            <p class="nav-logo">MR Mates</p>
-        </div>
+    <header class="main-header">
+        <a href="./index.html" class="logo">MR Mates</a>
         <nav class="main-nav">
             <ul class="nav-list">
                 <li><a href="./index.html" class="nav-link">Inicio</a></li>
@@ -26,27 +24,33 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section>
-            <h1>Hola, somos MR. Mates</h1>
-            <p>Bienvenidos a nuestra tienda de mates. Acá vas a encontrar el mate que se adapte a tus gustos.</p>
+    <main class="main-content">
+        <section class="hero-section">
+            <h1 class="hero-title">Hola, somos MR. Mates</h1>
+            <p class="hero-description">Bienvenidos a nuestra tienda de mates. Acá vas a encontrar el mate que se adapte
+                a tus gustos.</p>
         </section>
-        <section>
-            <h2>Algunos de los mates de que podes encontrar en nuestra tienda.</h2>
-            <article>
-                <h3>Mate Imperial</h3>
-                <figure>
-                    <img src="./assets/mateimperial.webp" alt="Fotografia de un mate imperial">
-                    <figcaption>Mate Imperial</figcaption>
-                </figure>
-            </article>
-            <article>
-                <h3>Mate Torpedo</h3>
-                <figure>
-                    <img src="./assets/matetorpedo.png" alt="Fotografia de un mate torpedo">
-                    <figcaption>Mate Torpedo</figcaption>
-                </figure>
-            </article>
+
+        <section class="products-section">
+            <h2 class="section-title">Algunos de los mates que podés encontrar en nuestra tienda</h2>
+
+            <div class="products-grid">
+                <article class="product-card">
+                    <h3 class="product-title">Mate Imperial</h3>
+                    <figure class="product-figure">
+                        <img src="./assets/mateimperial.webp" alt="Fotografía de un mate imperial" class="product-img">
+                        <figcaption class="product-caption">Mate Imperial</figcaption>
+                    </figure>
+                </article>
+
+                <article class="product-card">
+                    <h3 class="product-title">Mate Torpedo</h3>
+                    <figure class="product-figure">
+                        <img src="./assets/matetorpedo.png" alt="Fotografía de un mate torpedo" class="product-img">
+                        <figcaption class="product-caption">Mate Torpedo</figcaption>
+                    </figure>
+                </article>
+            </div>
         </section>
     </main>
 
