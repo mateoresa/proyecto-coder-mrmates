@@ -24,7 +24,59 @@
             </ul>
         </nav>
     </header>
-    <main>
+
+    <main class="main-content">
+        <section class="contact-section">
+            <div class="contact-intro">
+                <h1 class="section-title">¡Gracias por elegirnos!</h1>
+                <p class="intro-paragraph">
+                    Gracias por visitar nuestro sitio web. Si alguno de nuestros productos te gustó, podés contactarnos
+                    por el siguiente formulario o por nuestras redes sociales.
+                </p>
+            </div>
+            <div class="contact-grid">
+                <!-- Formulario de contacto -->
+                <section class="contact-form-card">
+                    <form class="contact-form" action="#" method="POST">
+                        <fieldset class="form-fieldset">
+                            <legend class="form-legend">Formulario de Contacto</legend>
+                            <div class="form-group">
+                                <label for="form_name" class="form-label">Nombre</label>
+                                <input type="text" id="form_name" name="name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form_mail" class="form-label">Dirección de e-mail</label>
+                                <input type="email" id="form_mail" name="email" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form_ubi" class="form-label">Ciudad y País</label>
+                                <input type="text" id="form_ubi" name="location" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="form_mensage" class="form-label">Mensaje</label>
+                                <textarea id="form_mensage" name="message" class="form-textarea"
+                                    placeholder="¡Hola! Dejanos acá tu consulta o contanos cuál fue el mate que más te gustó."
+                                    required></textarea>
+                            </div>
+                        </fieldset>
+                        <button type="submit" class="form-submit">Enviar Mensaje</button>
+                    </form>
+                </section>
+                <!-- Bloque de información y local -->
+                <section class="contact-store-card">
+                    <h2 class="store-title">Pasá por nuestro local</h2>
+                    <figure class="store-figure">
+                        <img src="../assets/tiendamatescontacto.webp" alt="Fotografía tienda de mates"
+                            class="store-img">
+                        <figcaption class="store-caption">Nuestro local en Buenos Aires</figcaption>
+                    </figure>
+                </section>
+            </div>
+        </section>
+    </main>
+
+
+    <!--<main>
         <h1>Gracias por elegirnos!</h1>
         <div>
             <p>Gracias por visitar nuestro sitio web. Si alguno de nuestros productos te gusto, podes contactarnos por
@@ -56,7 +108,7 @@
                 <figcaption>Nuestro local</figcaption>
             </figure>
         </section>
-    </main>
+    </main>-->
     <footer class="main-footer">
         <div class="footer-content">
             <p class="footer-brand">MR. Mates</p>

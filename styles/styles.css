@@ -5,60 +5,67 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
+    /*height: 100vh;*/
     width: 100%;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #171A17;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ----------------------------------------Seccion Header---------------------------------------- */
 .main-header {
+    /*Header mobile*/
     background-color: #1F3324;
-    padding: 15px 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-    font-size: 1.3rem;
-    font-weight: 700;
+    /*Logo Mobile*/
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #F4EFE3;
     text-decoration: none;
 }
 
 .nav-list {
+    /*Nav-List Mobile*/
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    gap: 1.25rem;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 .nav-link {
-    color: #F4EFE3;
+    /*Nav-Link Mobile*/
     text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    color: #F4EFE3;
+    font-weight: 500;
 }
 
 .nav-link:hover {
     color: #C49A6C;
 }
 
-
-
 /* ----------------------------------------Seccion Main---------------------------------------- */
 /* ====================
 SECCIÓN HERO / BIENVENIDA
 ==================== */
+
 .main-content {
-    max-width: 1100px;
+    /*Main-Content Mobile*/
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 30px 20px;
 }
@@ -69,13 +76,15 @@ SECCIÓN HERO / BIENVENIDA
 }
 
 .hero-title {
-    font-size: 2.2rem;
-    color: #8A5A3B;
+    /*Hero-Title Mobile*/
+    font-size: 2rem;
     margin-bottom: 10px;
+    color: #8A5A3B;
 }
 
 .hero-description {
-    font-size: 1.1rem;
+    /*Hero-Description Mobile*/
+    font-size: 1rem;
     color: #171A17;
 }
 
@@ -87,48 +96,68 @@ SECCIÓN PRODUCTOS (CSS GRID)
 }
 
 .section-title {
-    text-align: center;
-    font-size: 1.6rem;
+    /*Section-Title Mobile*/
     color: #8A5A3B;
-    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
 }
 
 /* Contenedor Grid */
+
 .products-grid {
+    /*Products-Grid Mobile 1 sola columna vertical*/
     display: grid;
-    /* Crea 2 columnas de igual tamaño */
-    grid-template-columns: repeat(2, 1fr);
-    /* Espacio entre las tarjetas */
-    gap: 30px;
+    grid-template-areas:
+        "imperial"
+        "torpedo";
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/*Asignacion de areas a las tarjetas*/
+.card-imperial {
+    grid-area: imperial;
+}
+
+.card-torpedo {
+    grid-area: torpedo;
 }
 
 /* Tarjeta individual */
 .product-card {
+    /*Product-Card Mobile*/
     background-color: #ffffff;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
 .product-title {
-    font-size: 1.3rem;
-    color: #1F3324;
+    /*Product-Title Mobile*/
+    font-size: 1.25rem;
     margin-bottom: 15px;
+    color: #1F3324;
 }
 
 .product-figure {
+    /*Product-Figure Mobile*/
     margin: 0;
     padding: 0;
 }
 
 .product-img {
+    /*Product-Img Mobile*/
     width: 100%;
-    max-width: 250px;
-    height: 250px;
-    object-fit: contain; /* Mantiene la proporción del mate sin recortarlo */
+    max-width: 220px;
+    height: 220px;
+    object-fit: contain;
     display: block;
-    margin: 0 auto 10px auto;
+    margin-bottom: 10px;
 }
 
 .product-caption {
@@ -138,24 +167,21 @@ SECCIÓN PRODUCTOS (CSS GRID)
 }
 
 /* ----------------------------------------Seccion Footer---------------------------------------- */
-/* ====================
-FOOTER (FLEXBOX)
-==================== */
 
 .main-footer {
     background-color: #1F3324;
     color: #F4EFE3;
     padding: 30px 20px;
-    margin-top: 50px;
+    width: 100%;
 }
 
 .footer-content {
-    max-width: 1100px;
-    margin: 0 auto;
+    /*Footer-Content Mobile*/
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
+    text-align: center;
+    gap: 15px;
 }
 
 .footer-brand {
@@ -169,7 +195,7 @@ FOOTER (FLEXBOX)
     list-style: none;
     margin: 0;
     padding: 0;
-    
+
     display: flex;
     gap: 25px;
     align-items: center;
@@ -189,7 +215,6 @@ FOOTER (FLEXBOX)
 .footer-copy {
     color: #b0b0b0;
     font-size: 0.85rem;
-    margin: 0;
 }
 
 /*------------------------------SECCION MAIN NOSOTROS------------------------------*/
@@ -198,52 +223,473 @@ FOOTER (FLEXBOX)
 SECCIÓN HISTORIA / NOSOTROS (CSS GRID)
 ==================== */
 
-.main-about-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
+.about-section {
+    margin-top: 10px;
 }
 
-.about-section {
+.about-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    grid-template-areas: 
+        "text"
+        "image";
+    grid-template-columns: 1fr;
+    gap: 25px;
     align-items: center;
+}
+
+.about-text-card {
+    grid-area: text;
     background-color: #ffffff;
-    padding: 30px;
+    padding: 24px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
-.about-title {
-    font-size: 2rem;
-    color: #8A5A3B;
+.about-subtitle {
+    font-size: 1.4rem;
     margin-bottom: 15px;
+    color: #8A5A3B;
 }
 
-.about-description {
-    font-size: 1.05rem;
-    color: #171A17;
+.about-paragraph {
+    font-size: 1rem;
     line-height: 1.6;
+    color: #171A17;
+    margin-bottom: 12px;
 }
 
-.about-figure {
+.about-paragraph:last-child {
+    margin-bottom: 0;
+}
+
+.about-figure-card {
+    grid-area: image;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0;
-    padding: 0;
-    text-align: center;
 }
 
 .about-img {
     width: 100%;
-    max-height: 350px;
-    object-fit: cover;
+    max-width: 320px;
+    height: auto;
     border-radius: 6px;
     display: block;
+    margin-bottom: 10px;
+    object-fit: cover;
 }
 
 .about-caption {
+    font-size: 0.9rem;
+    color: #666666;
+    font-style: italic;
+    text-align: center;
+}
+
+/*-----------------------------------SECCION PRODUCTOS-----------------------------------*/
+
+/* ===================================================
+CATÁLOGO DE PRODUCTOS (MOBILE-FIRST)
+=================================================== */
+.products-catalog-section {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #8A5A3B;
+}
+
+/* Grilla Mobile: 1 columna vertical con áreas nombradas */
+.products-catalog-grid {
+    display: grid;
+    grid-template-areas:
+        "imperial"
+        "torpedo";
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Asignación de áreas */
+.item-imperial {
+    grid-area: imperial;
+}
+
+.item-torpedo {
+    grid-area: torpedo;
+}
+
+/* Estilos de cada tarjeta */
+.product-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #8A5A3B;
+}
+
+.product-desc {
+    font-size: 0.95rem;
+    color: #171A17;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.product-figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-img {
+    width: 100%;
+    max-width: 240px;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.product-caption {
     font-size: 0.85rem;
     color: #666666;
-    margin-top: 8px;
     font-style: italic;
+}
+
+/*-----------------------------------SECCION TIPS-----------------------------------*/
+
+/* ===================================================
+SECCIÓN TIPS (MOBILE-FIRST)
+=================================================== */
+.tips-section {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Grilla Mobile: 1 sola columna vertical con áreas nombradas */
+.tips-grid {
+    display: grid;
+    grid-template-areas:
+        "curar"
+        "temp"
+        "estado";
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Asignación de áreas a cada tarjeta */
+.card-curar {
+    grid-area: curar;
+}
+
+.card-temp {
+    grid-area: temp;
+}
+
+.card-estado {
+    grid-area: estado;
+}
+
+/* Estilos de las tarjetas de tips */
+.tip-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tip-subtitle {
+    font-size: 1.3rem;
+    color: #8A5A3B;
+    margin-bottom: 12px;
+}
+
+.tip-text {
+    font-size: 1rem;
+    color: #171A17;
+    line-height: 1.5;
+}
+
+.tip-figure {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tip-img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 8px;
+    object-fit: cover;
+}
+
+.tip-caption {
+    font-size: 0.85rem;
+    color: #666666;
+    font-style: italic;
+    text-align: center;
+}
+
+/*----------------------------------------SECCION CONTACTO-----------------------------------*/
+
+/* ===================================================
+SECCIÓN CONTACTO (MOBILE-FIRST)
+=================================================== */
+.contact-section {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 30px auto;
+}
+
+.intro-paragraph {
+    font-size: 1rem;
+    color: #171A17;
+    line-height: 1.5;
+}
+
+/* Grilla Mobile: 1 columna vertical con áreas nombradas */
+.contact-grid {
+    display: grid;
+    grid-template-areas:
+        "form"
+        "store";
+    grid-template-columns: 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+/* Asignación de áreas */
+.contact-form-card {
+    grid-area: form;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.contact-store-card {
+    grid-area: store;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos de formulario */
+.form-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.form-legend {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #8A5A3B;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-size: 0.95rem;
+    color: #333333;
+    font-weight: 500;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: #D35400;
+}
+
+.form-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-submit {
+    background-color: #D35400;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.form-submit:hover {
+    background-color: #b84300;
+}
+
+/* Estilos de la tarjeta del local */
+.store-title {
+    font-size: 1.3rem;
+    color: #8A5A3B;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.store-figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.store-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 8px;
+    object-fit: cover;
+}
+
+.store-caption {
+    font-size: 0.85rem;
+    color: #666666;
+    font-style: italic;
+}
+
+
+/*--------------------MEDIA QUERY ESCRITORIO (min-width: 1024px)--------------------*/
+
+@media (min-width: 1024px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+
+    .products-grid {
+        grid-template-areas:
+            "imperial torpedo";
+        grid-template-columns: repeat(2, 350px);
+        gap: 24px;
+        justify-content: center;
+    }
+
+    .product-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-brand {
+        text-align: left;
+        justify-self: start;
+        margin: 0;
+    }
+
+    .footer-links {
+        justify-self: center;
+        margin: 0;
+    }
+
+    .footer-copy {
+        text-align: right;
+        justify-self: end;
+        margin: 0;
+    }
+
+    .about-grid {
+        grid-template-areas: "text image";
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 35px;
+    }
+
+    .products-catalog-grid {
+        grid-template-areas: "imperial torpedo";
+        grid-template-columns: repeat(2, 380px);
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .tips-grid {
+        grid-template-areas: 
+            "curar estado"
+            "temp estado";
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 25px;
+        align-items: stretch;
+    }
+
+    .contact-grid {
+        grid-template-areas: "form store";
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 35px;
+        align-items: start;
+    }
+
+    .form-submit {
+        width: auto;
+        padding: 12px 30px;
+    }
 }
