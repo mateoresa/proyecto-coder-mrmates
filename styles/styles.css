@@ -6,7 +6,6 @@
 
 body {
     min-height: 100vh;
-    /*height: 100vh;*/
     width: 100%;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -17,43 +16,44 @@ body {
 }
 
 /* ----------------------------------------Seccion Header---------------------------------------- */
+
 .main-header {
     /*Header mobile*/
     background-color: #1F3324;
-    padding: 15px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 1rem 0;
 }
 
-.logo {
-    /*Logo Mobile*/
-    font-size: 1.5rem;
-    font-weight: bold;
+.navbar-brand.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
     color: #F4EFE3;
     text-decoration: none;
 }
 
-.nav-list {
-    /*Nav-List Mobile*/
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.nav-link {
-    /*Nav-Link Mobile*/
-    text-decoration: none;
+.main-header .nav-link {
     color: #F4EFE3;
+    font-size: 1rem;
     font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.nav-link:hover {
+.main-header .nav-link:hover,
+.main-header .nav-link:focus {
     color: #C49A6C;
+}
+
+.main-header .nav-link.active {
+    color: #C49A6C;
+    font-weight: 700;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
 }
 
 /* ----------------------------------------Seccion Main---------------------------------------- */
@@ -166,6 +166,63 @@ SECCIÓN PRODUCTOS (CSS GRID)
     font-style: italic;
 }
 
+/* --- Carousel --- */
+/* Altura base en mobile */
+.carousel-item img {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* --- Cards y Efectos con Pseudoclases --- */
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+/* Efecto hover sobre las cards */
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Botones personalizados con hover y active */
+.custom-btn {
+    background-color: #2b2b2b;
+    border-color: #2b2b2b;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.custom-btn:hover,
+.custom-btn:focus {
+    background-color: #4caf50;
+    border-color: #4caf50;
+    color: #ffffff;
+}
+
+.custom-btn:active {
+    transform: scale(0.98);
+}
+
+.carousel-caption {
+    bottom: 10px;
+    padding: 0.5rem;
+}
+
+.carousel-caption h5 {
+    color: #8A5A3B;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption p {
+    color: #1F3324;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+
 /* ----------------------------------------Seccion Footer---------------------------------------- */
 
 .main-footer {
@@ -229,7 +286,7 @@ SECCIÓN HISTORIA / NOSOTROS (CSS GRID)
 
 .about-grid {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "text"
         "image";
     grid-template-columns: 1fr;
@@ -620,10 +677,37 @@ SECCIÓN CONTACTO (MOBILE-FIRST)
         padding: 20px 40px;
     }
 
+    .carousel-item img {
+        height: 450px;
+        object-fit: contain;
+        background-color: #1a1a1a;
+    }
+
+    .carousel-caption {
+        bottom: 30px;
+        max-width: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 1rem 1.5rem;
+        background-color: rgba(0, 0, 0, 0.45);
+        border-radius: 8px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+        margin-bottom: 0;
+        line-height: 1.4;
+    }
+
     .products-grid {
         grid-template-areas:
             "imperial torpedo";
-        grid-template-columns: repeat(2, 350px);
+        grid-template-columns: repeat(2, 1fr);
         gap: 24px;
         justify-content: center;
     }
@@ -667,13 +751,13 @@ SECCIÓN CONTACTO (MOBILE-FIRST)
 
     .products-catalog-grid {
         grid-template-areas: "imperial torpedo";
-        grid-template-columns: repeat(2, 380px);
+        grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         gap: 30px;
     }
 
     .tips-grid {
-        grid-template-areas: 
+        grid-template-areas:
             "curar estado"
             "temp estado";
         grid-template-columns: 1.2fr 0.8fr;
