@@ -1,4 +1,4 @@
-# Nombre de tu Proyecto / Marca
+# MR. Mates
 
 Sitio web desarrollado para mostrar una tienda de mates.
 
