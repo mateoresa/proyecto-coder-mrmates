@@ -1,0 +1,19 @@
+@use "../utilities/variables" as *;
+
+.custom-btn {
+    background-color: $color-btn-default;
+    border-color: $color-btn-default;
+    color: $color-blanco;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+
+    &:hover,
+    &:focus {
+        background-color: $color-btn-hover;
+        border-color: $color-btn-hover;
+        color: $color-btn-default;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}

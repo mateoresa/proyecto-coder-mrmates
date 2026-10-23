@@ -1,0 +1,20 @@
+@use "../utilities/variables" as *;
+
+.main-header {
+    background-color: $color-principal;
+    padding: 1rem 0;
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 40px;
+    }
+}
+
+.navbar-brand.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $color-fondo-claro;
+    text-decoration: none;
+}
+

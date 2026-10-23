@@ -1,0 +1,29 @@
+@use "../utilities/variables" as *;
+
+.main-header {
+    .nav-link {
+        color: $color-fondo-claro;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.5rem 0.8rem;
+        transition: color 0.3s ease, transform 0.2s ease;
+
+        &:hover,
+        &:focus {
+            color: $color-dorado;
+        }
+
+        &.active {
+            color: $color-dorado;
+            font-weight: 700;
+        }
+    }
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}

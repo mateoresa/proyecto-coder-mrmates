@@ -1,0 +1,87 @@
+@use "../utilities/variables" as *;
+
+.contact-section {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 30px auto;
+}
+
+.intro-paragraph {
+    font-size: 1rem;
+    color: $color-texto;
+    line-height: 1.5;
+}
+
+.form-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.form-legend {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: $color-acento;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-size: 0.95rem;
+    color: #333333;
+    font-weight: 500;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid $color-input-borde;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+
+    &:focus {
+        border-color: $color-naranja;
+    }
+}
+
+.form-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-submit {
+    background-color: $color-naranja;
+    color: $color-blanco;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: $color-naranja-hover;
+    }
+
+    @media (min-width: 1024px) {
+        width: auto;
+        padding: 12px 30px;
+    }
+}

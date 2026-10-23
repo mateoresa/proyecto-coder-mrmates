@@ -1,0 +1,19 @@
+// 1. Utilidades y configuración
+@use "utilities/variables" as *;
+@use "utilities/mixins";
+
+// 2. Estilos base
+@use "base/base";
+@use "base/tipografia";
+
+// 3. Layout general
+@use "layout/header";
+@use "layout/nav";
+@use "layout/grid";
+@use "layout/footer";
+
+// 4. Componentes específicos
+@use "components/buttons";
+@use "components/cards";
+@use "components/forms";
+

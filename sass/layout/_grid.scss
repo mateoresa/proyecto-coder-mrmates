@@ -1,0 +1,116 @@
+// Grillas de Productos
+.products-section,
+.products-catalog-section {
+    margin-top: 20px;
+}
+
+.products-grid,
+.products-catalog-grid {
+    display: grid;
+    grid-template-areas:
+        "imperial"
+        "torpedo";
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @media (min-width: 1024px) {
+        grid-template-areas: "imperial torpedo";
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+.card-imperial,
+.item-imperial {
+    grid-area: imperial;
+}
+
+.card-torpedo,
+.item-torpedo {
+    grid-area: torpedo;
+}
+
+// Grilla Nosotros
+.about-section {
+    margin-top: 10px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-areas:
+        "text"
+        "image";
+    grid-template-columns: 1fr;
+    gap: 25px;
+    align-items: center;
+
+    @media (min-width: 1024px) {
+        grid-template-areas: "text image";
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 35px;
+    }
+}
+
+// Grilla Tips
+.tips-section {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-areas:
+        "curar"
+        "temp"
+        "estado";
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @media (min-width: 1024px) {
+        grid-template-areas:
+            "curar estado"
+            "temp estado";
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 25px;
+        align-items: stretch;
+    }
+}
+
+.card-curar {
+    grid-area: curar;
+}
+
+.card-temp {
+    grid-area: temp;
+}
+
+.card-estado {
+    grid-area: estado;
+}
+
+// Grilla Contacto
+.contact-grid {
+    display: grid;
+    grid-template-areas:
+        "form"
+        "store";
+    grid-template-columns: 1fr;
+    gap: 25px;
+    align-items: start;
+
+    @media (min-width: 1024px) {
+        grid-template-areas: "form store";
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 35px;
+        align-items: start;
+    }
+}
+
+.contact-form-card {
+    grid-area: form;
+}
+
+.contact-store-card {
+    grid-area: store;
+}
