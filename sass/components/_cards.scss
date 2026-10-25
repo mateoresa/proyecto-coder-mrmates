@@ -1,28 +1,31 @@
+// scss/components/_cards.scss
 @use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
 
-.custom-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid $color-borde;
+// MOLDE BASE COMPARTIDO CON %
+%card-base {
+    background-color: $color-blanco;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: $sombra-card;
+}
+
+// Tarjetas de Productos
+.product-card,
+.product-item {
+    @extend %card-base; // Hereda el molde
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include smooth-transition(transform, 0.3s);
 
     &:hover {
         transform: translateY(-5px);
         box-shadow: $sombra-hover;
     }
-}
 
-// Productos
-.product-card,
-.product-item {
-    background-color: $color-blanco;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: $sombra-card;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    @media (min-width: 1024px) {
+    @include respond-to(desktop) {
         max-width: 100%;
         width: 100%;
     }
@@ -66,16 +69,13 @@
     font-style: italic;
 }
 
-// Nosotros (About)
+// Tarjetas de Nosotros
 .about-text-card {
-    background-color: $color-blanco;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: $sombra-card;
-    text-align: center; // Centrado en mobile
+    @extend %card-base; // Hereda el molde
+    text-align: center;
 
-    @media (min-width: 1024px) {
-        text-align: left; // Vuelve a la izquierda en escritorio (opcional)
+    @include respond-to(desktop) {
+        text-align: left;
     }
 }
 
@@ -124,13 +124,9 @@
     text-align: center;
 }
 
-
-// Tips
+// Tarjetas de Tips
 .tip-card {
-    background-color: $color-blanco;
-    border-radius: 8px;
-    padding: 24px;
-    box-shadow: $sombra-card;
+    @extend %card-base; // Hereda el molde
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,13 +169,10 @@
     text-align: center;
 }
 
-// Contacto Cards
+// Tarjetas de Contacto
 .contact-form-card,
 .contact-store-card {
-    background-color: $color-blanco;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: $sombra-card;
+    @extend %card-base; // Hereda el molde
 }
 
 .contact-store-card {
@@ -220,12 +213,12 @@
     font-style: italic;
 }
 
-// Carousel
+// Carrusel
 .carousel-item img {
     height: 250px;
     object-fit: cover;
 
-    @media (min-width: 1024px) {
+    @include respond-to(desktop) {
         height: 450px;
         object-fit: contain;
         background-color: #1a1a1a;
@@ -250,7 +243,7 @@
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
     }
 
-    @media (min-width: 1024px) {
+    @include respond-to(desktop) {
         bottom: 30px;
         max-width: 70%;
         left: 50%;
@@ -271,3 +264,4 @@
         }
     }
 }
+

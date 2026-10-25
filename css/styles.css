@@ -48,6 +48,29 @@ body {
   margin-bottom: 25px;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-section {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.form-submit,
+.btn-custom {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.form-submit:hover,
+.btn-custom:hover {
+  transform: scale(1.03);
+}
+
 .main-header {
   background-color: #1F3324;
   padding: 1rem 0;
@@ -285,25 +308,27 @@ body {
   transform: scale(0.98);
 }
 
-.custom-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #e0e0e0;
-}
-.custom-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+.contact-form-card,
+.contact-store-card, .tip-card, .about-text-card, .product-card,
+.product-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 .product-card,
 .product-item {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+.product-card:hover,
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 @media (min-width: 1024px) {
   .product-card,
@@ -352,10 +377,6 @@ body {
 }
 
 .about-text-card {
-  background-color: #ffffff;
-  padding: 24px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
 @media (min-width: 1024px) {
@@ -409,10 +430,6 @@ body {
 }
 
 .tip-card {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 24px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -453,14 +470,6 @@ body {
   color: #666666;
   font-style: italic;
   text-align: center;
-}
-
-.contact-form-card,
-.contact-store-card {
-  background-color: #ffffff;
-  padding: 24px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 .contact-store-card {

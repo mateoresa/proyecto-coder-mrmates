@@ -1,0 +1,28 @@
+// scss/base/_animaciones.scss
+
+// Animación de entrada suave hacia arriba
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Aplicación sobre el Hero
+.hero-section {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+// Efecto de pulso suave sobre los botones al hacer hover
+.form-submit,
+.btn-custom {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}

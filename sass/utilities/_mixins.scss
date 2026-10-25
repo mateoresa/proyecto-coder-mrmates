@@ -1,9 +1,27 @@
+// scss/utilities/_mixins.scss
+
+// 1. Mixin con parámetro para Responsive Design (Mobile-First)
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == tablet {
+        @media (min-width: 768px) { @content; }
+    } @else if $breakpoint == desktop {
+        @media (min-width: 1024px) { @content; }
+    }
+}
+
+// 2. Mixin con parámetros para transiciones suaves
+@mixin smooth-transition($property: all, $time: 0.3s, $timing: ease) {
+    transition: $property $time $timing;
+}
+
+// 3. Flex center
 @mixin flex-center($direction: column) {
     display: flex;
     flex-direction: $direction;
     align-items: center;
     justify-content: center;
 }
+
 
 @mixin card-base {
     background-color: #ffffff;

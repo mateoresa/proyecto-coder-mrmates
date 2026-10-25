@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/styles.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Tips | MR Mates</title>
 </head>
 
@@ -52,15 +54,15 @@
         <section class="tips-section">
             <h1 class="section-title">Algunos tips para el cuidado de tu mate</h1>
             <div class="tips-grid">
-                <article class="tip-card card-curar">
+                <article class="tip-card card-curar" data-aos="fade-right">
                     <h2 class="tip-subtitle">Cómo curar un mate de calabaza</h2>
                     <p class="tip-text">Llená el mate con yerba usada y humedecé con agua tibia durante 24 horas.</p>
                 </article>
-                <article class="tip-card card-temp">
+                <article class="tip-card card-temp" data-aos="fade-right">
                     <h2 class="tip-subtitle">Temperatura ideal del agua</h2>
                     <p class="tip-text">El agua nunca debe hervir. La temperatura recomendada es entre 75°C y 80°C.</p>
                 </article>
-                <article class="tip-card card-estado">
+                <article class="tip-card card-estado" data-aos="fade-left">
                     <h2 class="tip-subtitle">Ejemplo de mate en mal estado</h2>
                     <figure class="tip-figure">
                         <img src="../assets/matemalestado.jpg" alt="Fotografia de un mate con hongos" class="tip-img">
@@ -85,6 +87,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+
 </body>
 
 </html>
