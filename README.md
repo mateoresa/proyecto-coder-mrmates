@@ -6,6 +6,10 @@ Sitio web desarrollado para mostrar una tienda de mates.
 
 ---
 
+## 🌐 Sitio Web Desplegado (Deploy)
+Podés ver el proyecto online funcionando acá:
+👉 **[Ver Sitio en Netlify](https://mrmates.netlify.app/)**
+
 ## 🚀 Tecnologías utilizadas
 
 - **HTML5:** Estructura semántica en 5 páginas.
@@ -31,8 +35,3 @@ proyecto/
 ├── index.html              # Página principal
 └── README.md               # Documentación del proyecto
 
----
-
-## 🌐 Sitio Web Desplegado (Deploy)
-Podés ver el proyecto online funcionando acá:
-👉 **[Ver Sitio en Netlify](mrmates.netlify.app)**
